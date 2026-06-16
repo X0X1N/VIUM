@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+:root {
+  background-color: #f9fafb;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  /* [UX 가이드 Phase 1] 브라우저 기본 동작 제어 */
+  overscroll-behavior-y: none; 
+  -webkit-tap-highlight-color: transparent;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 모바일 하단바 여백 대응 (Safe Area) */
+.pb-safe {
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+/* 스크롤바 숨기기 (App-like UX) */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* 로딩 프로그레스 바 애니메이션 */
+@keyframes progress {
+  0% { width: 0%; }
+  100% { width: 100%; }
+}
+
+.animate-progress {
+  animation: progress 3s linear;
+}
+
+/* 애니메이션 유틸리티 */
+@keyframes bounce-subtle {
+  0%, 100% { transform: translateY(-5%); }
+  50% { transform: translateY(0); }
+}
+
+.animate-bounce-subtle {
+  animation: bounce-subtle 2s infinite;
+}

@@ -1,0 +1,50 @@
+# General (공통 제외 항목)
+node_modules/
+.DS_Store
+dist/
+build/
+.env
+.venv/
+**/__pycache__/
+*.pyc
+
+# VIUM Backend (백엔드 전용 제외 항목)
+vium-backend/.env
+vium-backend/vium.db
+vium-backend/docker/
+vium-backend/venv/
+vium-backend/app/**/__pycache__/
+*.db
+
+# VIUM Web (프론트엔드 전용 제외 항목)
+vium-web/node_modules/
+vium-web/dist/
+
+# Gemini Logs & Screenshots (기타)
+logs/
+*.png
+*.jpg
+*.jpeg
+*.gif
+.geminiignore
+
+# Additional Privacy Protection
+*.txt
+*.ino
+*.log
+nohup.out
+VIUM_*.md
+vium-backend/vium.db
+
+# Hardware local secrets / generated files
+hardware/arduino/**/config.h
+hardware/raspberrypi/**/.env
+hardware/raspberrypi/**/*.env
+hardware/raspberrypi/**/vium_car.onnx
+hardware/raspberrypi/**/models/*.onnx
+*.bin
+*.elf
+*.map
+
+# Allow Arduino source files under hardware even if *.ino is ignored above
+!hardware/**/*.ino
