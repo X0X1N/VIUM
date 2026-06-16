@@ -76,14 +76,12 @@ VIUM
 - HTML5
 - CSS3
 - JavaScript
-- React 또는 Vue 기반 UI
-- Android Studio
-- Kotlin
+
 
 ### Backend
 
 - Python
-- Flask / FastAPI
+- FastAPI
 - REST API
 
 ### Database
